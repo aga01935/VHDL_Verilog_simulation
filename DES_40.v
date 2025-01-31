@@ -17,14 +17,13 @@ always @ (posedge clock_40) begin //only take data at rising edge of the clock
 	if(reset) begin 
 		shifter <= 8'b00000000; //if reset then shifter is set to 0000000 
 	end
-	else begin 
-		if(enable) begin
-			shifter <= data_in;
+	else if(enable) begin
+		shifter <= data_in;
 		end
-		else begin
-			data_out <= shifter[0];
-			shifter <= {1'b0,shifter[7:1]};
-		end
+	else begin	
+		shifter <= {1'b0,shifter[7:1]};
+		data_out <= shifter[0];
+			
 	end
 end
 endmodule // end of module 
