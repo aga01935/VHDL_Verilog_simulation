@@ -5,6 +5,7 @@ vsim tb -voptargs=+acc
 ## adding the waves
 
 add wave *
+## configureing the wave 
 
 ## show the wave window
 
@@ -12,4 +13,4 @@ view  wave
 
 ##run the simulation
 
-run 100 ns 
+run 300 ns 
