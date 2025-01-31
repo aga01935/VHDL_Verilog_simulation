@@ -1,4 +1,5 @@
 //testbench for the Des_40 --> 40 MHZ clock and DES_160 for 160 MHZ clock
+`timescale 1ns/1ps
 module tb; //module for testbench is here 
 
    reg clk_40; 
@@ -40,29 +41,30 @@ module tb; //module for testbench is here
   
   initial begin 
     //start clock at 0 and reset the signal
-  
-    clk_40 = 0 ;
-    clk_160 =0;
     rst   =  1 ;
+    clk_40 = 1 ;
+    clk_160 =1;
     en =   0 ;
     dt_in =  8'b00000000; //data in will be 8 bit binary 00000000
     //dt_out = 1'b0;        //dataout is 1 bit binary --> 0 initially 
-    #50  rst = 0   ; // wait for 50 ns
+    rst = 0   ; // wait for 50 ns
    
      //disable the reset
     
-    #30  en = 1; // then wait for 30 ns for data
+    #25  en =1; // then wait for 50 ns for data
     $display("this is enable %b",en);
     // enable the data taking 
     //repat(10)
     dt_in = 8'b10111011 ; //sample data sent in the future it will be provided by some generator
-    $display("data_in %b",dt_in);		
+    //#50 en = 1;
+     $display("data_in %b",dt_in);		
     //end
+   // #50 en = 1;
     #50 en = 0;
-    
+		
     $display("data_out %b", dt_out_160) ;
 
-    #1000 ; // wait for 100 ns
+    #100000 ; // wait for 100 ns
     
  // end simulation
 
