@@ -99,13 +99,13 @@ module tb; //module for testbench is here
         
      	
 	 				
-    	//#100; //wait  
+    	#100; //wait  
   
        // en_160=1;  //enablieng the 160 MHZ sampling
      //   en_40 =1; //enabling 40 MHZ sampling
-  //  	#50//#18; // this number was picked so that deserializer is  enabled after we get serialized signal  		
+    	#50//#18; // this number was picked so that deserializer is  enabled after we get serialized signal  		
       //  en = 0; //enabling the deserializeation
-    //    #52
+        #52
     
      
      

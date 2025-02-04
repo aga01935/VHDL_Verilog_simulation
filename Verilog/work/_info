@@ -1,0 +1,467 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.4 2023.10, Oct  9 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/yyg/Simulation/VHDL_Verilog_simulation/Verilog
+T_opt
+!s110 1738622238
+V4]oNJP?[bVLzUFa]JlQ9G3
+04 2 4 work tb fast 0
+=1-000ae431a4f1-67a1451e-a9e6b-3a3be
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.4;77
+vds_160
+Z4 2Ser.v|DES_40.v|DES_160.v|testbench.v
+Z5 !s110 1738622233
+!i10b 1
+!s100 R1[[f>[1g67Ca2@3dV85_3
+IUMT=>Y_<kB1Xg_QK>A5L53
+R2
+w1738612484
+8DES_160.v
+FDES_160.v
+!i122 359
+L0 3 59
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.4;77
+r1
+!s85 0
+31
+Z8 !s108 1738622233.000000
+Z9 !s107 testbench.v|DES_160.v|DES_40.v|Ser.v|
+Z10 !s90 -reportprogress|300|Ser.v|DES_40.v|DES_160.v|testbench.v|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vds_40
+R4
+R5
+!i10b 1
+!s100 5N>_E1GdE@HHg?o:EG9In2
+I9JnfcGMCG]=Ah2Y_VJ53j0
+R2
+w1738618745
+8DES_40.v
+FDES_40.v
+!i122 359
+L0 3 47
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
+vSer
+R4
+R5
+!i10b 1
+!s100 JTL62XT2kUU2<4o]2K3ca2
+IfzYSzVT2K5IPPaM@f^Cdo3
+R2
+w1738622230
+8Ser.v
+FSer.v
+!i122 359
+L0 3 51
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
+n@ser
+vtb
+R4
+R5
+!i10b 1
+!s100 L42P5NdHRo0;?`gFfJ:hA1
+IZ;cP7<PP5`B9c=4jTRUa73
+R2
+w1738621504
+8testbench.v
+Ftestbench.v
+!i122 359
+L0 3 138
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3

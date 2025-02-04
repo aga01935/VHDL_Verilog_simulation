@@ -17,26 +17,29 @@ reg hold  ; //hold until the process is complete
 reg[3:0] delay_count =4'b0000 ;
 
 
+always @ (posedge clock_ser) begin
+	delay_count <= delay_count+1;
 
+end
 always @ (posedge clock_ser) begin //only take data at rising edge of the clock
 	if(reset) begin 
 		shifter <= 8'b00000000; //if reset then shifter is set to 0000000 
 		count = 4'b0000; //reset the counter
 		hold = 1'b0 ;
-		
+		delay_count =4'b0000;
 		
 		
 	end
 	else begin
 		 if(count == 4'b0000 &&!hold) begin
 		 shifter <= data_in;
-		//$display("counter %b, %b data_in", count,data_in);
+		$display("counter %b, %b data_in", count,data_in);
 		 data_out <=shifter[0];
 		 $display("counter %b, %b data_in ", count,data_in);
 		 hold = 1'b1;
 		 
 		end
-		else  begin	
+		else if(delay_count == 4'b0100) begin	
 			shifter <= {1'b0,shifter[7:1]};
 			data_out <= shifter[0];
 			count <= count +1;

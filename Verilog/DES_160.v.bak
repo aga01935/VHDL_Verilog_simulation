@@ -3,7 +3,7 @@
 module ds_160 (
 //inputs and out put are defined here
 input reset       , //reset signal
-//input enable ,// enable data taking for 160 MHZ
+input enable ,// enable data taking for 160 MHZ
 input clock_160    , // clock signal
 input data_in  , //data in 1 bit
 output reg [7:0]  data_out  // 8 bit

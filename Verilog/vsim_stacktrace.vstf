@@ -1,0 +1,76 @@
+# Current time Mon Feb  3 19:46:37 2025
+# Program = vsim
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = 7e2d8c2fde9883586eb3beac26ace95a
+# 0    0x0000000002573590: '<unknown (@0x2573590)>'
+# 1    0x00000000007543dd: '<unknown (@0x7543dd)>'
+# 2    0x0000000000b0c620: '<unknown (@0xb0c620)>'
+# 3    0x0000000000b0c99b: '<unknown (@0xb0c99b)>'
+# 4    0x00007ffff7840e2d: '__run_exit_handlers + 0x000000000000016d' in '/lib64/libc.so.6'
+# 5    0x00007ffff7840f70: '__on_exit + 0x0000000000000000' in '/lib64/libc.so.6'
+# 6    0x0000000000b08617: '<unknown (@0xb08617)>'
+# 7    0x00000000029388f4: '<unknown (@0x29388f4)>'
+# 8    0x0000000000b13517: '<unknown (@0xb13517)>'
+# End of Stack Trace
+
+
+# Current time Mon Feb  3 19:46:37 2025
+# Program = vsim
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = 7e2d8c2fde9883586eb3beac26ace95a
+# 0    0x0000000002573590: '<unknown (@0x2573590)>'
+# 1    0x00000000007543dd: '<unknown (@0x7543dd)>'
+# 2    0x0000000000b0c620: '<unknown (@0xb0c620)>'
+# 3    0x0000000000b0c99b: '<unknown (@0xb0c99b)>'
+# 4    0x00007ffff7840e2d: '__run_exit_handlers + 0x000000000000016d' in '/lib64/libc.so.6'
+# 5    0x00007ffff7840f70: '__on_exit + 0x0000000000000000' in '/lib64/libc.so.6'
+# 6    0x0000000000b08617: '<unknown (@0xb08617)>'
+# 7    0x00000000029388f4: '<unknown (@0x29388f4)>'
+# 8    0x0000000000b13517: '<unknown (@0xb13517)>'
+# End of Stack Trace
+
+
+# Current time Mon Feb  3 19:46:37 2025
+# Program = vsim
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = 7e2d8c2fde9883586eb3beac26ace95a
+# 0    0x0000000002573590: '<unknown (@0x2573590)>'
+# 1    0x00000000007543dd: '<unknown (@0x7543dd)>'
+# 2    0x0000000000b0c620: '<unknown (@0xb0c620)>'
+# 3    0x0000000000b0c99b: '<unknown (@0xb0c99b)>'
+# 4    0x00007ffff7840e2d: '__run_exit_handlers + 0x000000000000016d' in '/lib64/libc.so.6'
+# 5    0x00007ffff7840f70: '__on_exit + 0x0000000000000000' in '/lib64/libc.so.6'
+# 6    0x0000000000b08617: '<unknown (@0xb08617)>'
+# 7    0x00000000029388f4: '<unknown (@0x29388f4)>'
+# 8    0x0000000000b13517: '<unknown (@0xb13517)>'
+# End of Stack Trace
+
+
+# Current time Mon Feb  3 19:46:37 2025
+# Program = vsim
+# Id = "2023.4"
+# Version = "2023.10"
+# Date = "Oct  9 2023"
+# Platform = "linux_x86_64"
+# Signature = 7e2d8c2fde9883586eb3beac26ace95a
+# 0    0x0000000002573590: '<unknown (@0x2573590)>'
+# 1    0x00000000007543dd: '<unknown (@0x7543dd)>'
+# 2    0x0000000000b0c620: '<unknown (@0xb0c620)>'
+# 3    0x0000000000b0c99b: '<unknown (@0xb0c99b)>'
+# 4    0x00007ffff7840e2d: '__run_exit_handlers + 0x000000000000016d' in '/lib64/libc.so.6'
+# 5    0x00007ffff7840f70: '__on_exit + 0x0000000000000000' in '/lib64/libc.so.6'
+# 6    0x0000000000b08617: '<unknown (@0xb08617)>'
+# 7    0x00000000029388f4: '<unknown (@0x29388f4)>'
+# 8    0x0000000000b13517: '<unknown (@0xb13517)>'
+# End of Stack Trace
+
+

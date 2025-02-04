@@ -28,7 +28,7 @@ always @ (posedge clock_40) begin //only take data at rising edge of the clock
 				count <= count +1;
 				shifter <= {data_in,shifter[7:1] };	
 				if(count == 4'b1000) begin
-				//$display("shifter filled %b, count %b, data  input %b",shifter,count, data_in);			
+				$display("shifter filled %b, count %b, data  input %b",shifter,count, data_in);			
 				data_out = shifter ;
 				count =4'b0000;
 			
