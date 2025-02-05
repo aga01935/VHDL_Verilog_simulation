@@ -6,6 +6,7 @@ module tb; //module for testbench is here
    reg clk_160;
 
    reg rst; 
+   reg rst_ser; //reset for serializer
    reg en; // reg --> storage of the data or value
    reg en_160; //
    reg en_40; // 
@@ -23,7 +24,7 @@ module tb; //module for testbench is here
 
   //Initialize Serrializer 
   Ser uut_s(
-  .reset(rst),
+  .reset(rst_ser),
   .clock_ser(clk_40),
   .data_in(dt_in),
   .enable(en),
@@ -66,61 +67,59 @@ module tb; //module for testbench is here
 
 //	end
   initial begin 
-    //start clock at 0 and reset the signal
-    rst   =  1 ;
-    clk_40 = 1 ;
-    clk_160 =1;
-    en =   0 ;
-    en_160 =0; 
-    dt_in =  8'b00000000; //data in will be 8 bit binary 00000000
-    //dt_out = 1'b0;        //dataout is 1 bit binary --> 0 initially 
-    rst = 0   ; // wait for 50 ns
-    //reg [2:0] counter  = 3b'000 
+    rst <= 0;
+    clk_40<=1;
+    
+    #2 clk_160<=1;
+    en_160 <=0;
+    en_40 <=0;
+    rst_ser =1;	
+    #10 rst <=1;
+    #10 rst =0;
    
-     //disable the reset
-    
-    #10  en =1; // then wait for 100 ns for data
-    $display("this is enable %b",en);
-    // enable the data taking 
-    //repat(10)
-    
-     dt_in = 8'b10111011 ; //sample data sent in the future it will be provided by some generator
-    //#50 en = 1;
-        
-     
-	 				
-    #100; //wait  
+   //repeat (10) begin
+    dt_in <= 8'b10101011; 
+    //repeat(10) begin
+    #2 en =1;
+   
+    rst_ser<=1;
+    #4 en =0;
+    rst_ser<=0;
   
-     en_160=1;  //enablieng the 160 MHZ sampling
-     en_40 =1; //enabling 40 MHZ sampling
-    #18; // this number was picked so that deserializer is  enabled after we get serialized signal  		
-    en = 0; //enabling the deserializeation
+    #25 en_40 =1;
+    en_160 <=1;
+	  	
+    #198 en <=1 ;
+    dt_in <=8'b11101011;
+   
+   // en_40 <=0;
+   // en_160 <=0;		
+	
+    #25 en =0;
     
+    //#6.25 en_160 =1;
+   // #6.25 en_40 <=1;	
+  //   end
     
+    #225 en <=1 ;
+    dt_in <=8'b11001111;
+   
+   // en_40 <=0;
+//    en_160 <=0;		
+	
+    #25 en =0;
+    
+  //  #6.25 en_160 =1;
+  //  #6.25 en_40 <=1;	
+  //   end
+     	
+    
+   // end
+
+    	
      
-     
-	
-     #300;
-
-     //step 1 enabling both at same time 
-     en_160 =0; // disabling after data have been recovered 
-     en_40 =0;	
-	
-		
+      		
     
-
-    #100 ; // wait for 100 ns
-    		
-     $display("data_in %b",dt_in);		
-    //end
-   // #50 en = 1;
-
-    $display("data_out 160 MHz%b  and data out at 40 MHz %b", dt_out_160, dt_out_40) ; 
-	
-    if( dt_out_160 ==dt_out_40) begin
-	$display("160 MHz and 40 MHz sampling are same");
-	end
- // end simulation
 
 end   
 

@@ -12,27 +12,36 @@ output reg [7:0]  data_out  // 8 bit
 
 
 reg [7:0] shifter; // 8 bit shifter to shift the bits as they are de-serializer
-reg [3:0]  count = 4'b000 ; // this is 4 bit counter to track completion of deserialization  4'b000  means 0 and  4'b1000 means 8
+reg [2:0]  count = 3'b000 ; // this is 4 bit counter to track completion of deserialization  4'b000  means 0 and  4'b1000 means 8
 
-always @ (posedge clock_40) begin //only take data at rising edge of the clock
+always @ (posedge clock_40 ) begin //only take data at rising edge of the clock
 	if(reset) begin   
-		shifter <= 8'b00000000;
-		count   <= 4'b0000;
-		data_out <=shifter;
+		//shifter <= 8'b00000000;
+		count   <= 3'b000;
+		//data_out <=shifter;
 		
 	end
+
 	else begin //when reset is 0
 		if(enable) begin	
 			//shifter <= {shifter[6:0], data_in };
-			if(data_in == 1'b0 || data_in == 1'b1) begin	// preliminary to check if data is  either 0 or 1 it is x when no data
-				count <= count +1;
-				shifter <= {data_in,shifter[7:1] };	
-				if(count == 4'b1000) begin
-				//$display("shifter filled %b, count %b, data  input %b",shifter,count, data_in);			
-				data_out = shifter ;
-				end
+			//if((data_in == 1'b0 || data_in == 1'b1)) begin	// preliminary to check if data is  either 0 or 1 it is x when no data
 				
-			end
+					
+				if(count == 3'b111) begin
+				         shifter = {data_in,shifter[7:1] };			
+				         //$display("shifter filled %b, count %b, data  input %b",shifter,count, data_in);			
+					data_out <= shifter ;
+					count <= 3'b000;
+				end
+				//else begin
+					shifter = {data_in,shifter[7:1] };
+					count = count +1;
+					//$display("count %b, data_in %b",count , data_in);
+						
+			//	end
+				
+			//end
 			//shifter <= data_in<< 1;
 			
 		        //$display("data shifer555 %b, count %b, in data %b",shifter,count, data_in);

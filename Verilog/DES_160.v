@@ -12,47 +12,53 @@ output reg [7:0]  data_out  // 8 bit
 
 
 reg [7:0] shifter; // 8 bit shifter to shift the bits as they are de-serializer
-reg [5:0]  count= 6'b00000 ; // this is 3 bit counter to track completion of deserialization  3'b000  means 0 and  3'b111 means 7
+reg [4:0]  count= 5'b00000 ; // this is 5 bit counter to track completion of deserialization  5'b00000  means 0 and  5'b11111 means 32
 
-always @ (posedge clock_160) begin //only take data at rising edge of the clock
+always @ (posedge clock_160 ) begin //only take data at rising edge of the clock
 	if(reset) begin   
-		shifter <= 8'b00000000;
-		count   <= 6'b00000;
-		data_out <=shifter;
+		//shifter <= 8'b00000000;
+		count   <= 5'b00000;
+		//data_out <=shifter;
 		
 	end
 	else begin //when reset is 0
 			if(enable) begin
-				if(data_in == 1'b0 || data_in == 1'b1) begin
-				count <= count +1;
+				
+				
 				//if(count == 5'b00011) begin 	//save every 3rd element
-				if(count === 6'b00000+3) begin 
-					shifter <= {data_in,shifter[7:1]};
-					//$display(" first count %b,%b is count",data_in,count);
+				if(count === 5'b00000+3) begin 
+					shifter = {data_in,shifter[7:1]};
+					
 				        end
-				if(count === 6'b00000+4+3)
+					
+				if(count === 5'b00000+4+3)begin 
 					shifter <= {data_in,shifter[7:1]};
-
-				if(count === 6'b00000+4+4+3)
+			              //  $display(" data_in  %b, count %b is count",data_in,count);			
+					end
+				if(count === 5'b00000+4+4+3)
 					shifter <= {data_in,shifter[7:1]};
 			
-				if(count == 6'b00000+4+4+4+3)
+				if(count == 5'b00000+4+4+4+3)
 					shifter <= {data_in,shifter[7:1]};
-				if(count == 6'b00000+4+4+4+4+3)
+				if(count == 5'b00000+4+4+4+4+3)
 					shifter <= {data_in,shifter[7:1] };	
-				if(count == 6'b00000+4+4+4+4+4+3)
+				if(count == 5'b00000+4+4+4+4+4+3)
 					shifter <= {data_in,shifter[7:1]};
-				if(count == 6'b00000+4+4+4+4+4+4+3)
+				if(count == 5'b00000+4+4+4+4+4+4+3)
 					shifter <= {data_in,shifter[7:1] };
-				if(count == 6'b00000+4+4+4+4+4+4+4+3)
+				if(count == 5'b00000+4+4+4+4+4+4+4+3)
 					shifter <= {data_in,shifter[7:1] };			
 			
-				if(count== 6'b100000) begin
-				
-					data_out <= shifter ;
-					//$display("data shifter %b ,  count %b,input %b",shifter,count,data_in);
+				if(count== 5'b11111) begin
+					shifter = {data_in,shifter[7:1]};
+					data_out = shifter ;
+					count = 5'b0000;
+					
 				end
-				end // data valid
+				//else
+				count <= count +1;
+		                //$display("data shifter %b ,  count %b,input %b",shifter,count,data_in); 			
+				
 			end //end enable
 
 	end //end reset = 0
