@@ -13,7 +13,7 @@ entity des_40 is
 		rst : in std_logic :='0';
 		enable : in std_logic:='0';
 		data_in : in std_logic; -- 1 bit data in 
-	        data_out: out std_logic_vector (7 downto 0) --8 bit data out
+    data_out: out std_logic_vector (7 downto 0) --8 bit data out
 		); -- end of port
 
 end des_40;
@@ -43,9 +43,10 @@ else
     if rising_edge(clk) then
      -- report "Entity: start is now = " & std_logic'image(start);
       
-      if count = "1001" then
-        count <= "0001";
-       
+      --if count = "1001" then
+        --count <= "0001";
+       if x = 9 then
+           X := 1;
         data_out <= shifter;
       end if;
       
@@ -60,6 +61,7 @@ else
         shifter(6 downto 0) <= shifter (7 downto 1); -- shift the data by one bit 
     
        count <= count + 1;
+       x :=x+1;
        
       end if; 
       
