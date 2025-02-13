@@ -20,3 +20,4 @@
 
 
 [Alt text](images/phase_detect_v1.png)
+<img src="images/phase_detect_v1.png" width="300" />
