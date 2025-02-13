@@ -24,4 +24,4 @@
 
 
 [Example output of first version of testbench](images/phase_detect_v1.png)
-<img src="images/phase_detect_v1.png" width="300" />
+<img src="images/phase_detect_v1.png" width="1000" />
