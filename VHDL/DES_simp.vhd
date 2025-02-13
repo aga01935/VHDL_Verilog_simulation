@@ -29,31 +29,21 @@ variable i: integer :=0;
 variable shift: integer:=0 ;
 begin
  if rst ='1' then 
-	--shifter<="00000000";
+	shifter<="00000000";
 	i := 0;
 	
 else 
 	  if rising_edge(clk) then
-  --loop
+     --loop
 		if i = 9 then
 		 	i :=1;
       shift:=0;  
 			data_out<=shifter;
-      -- report "Entity: shifting = " & std_logic'image(data_in); 
-			-- exit;
+   
 		end if;
-    
-    
-	  
-   -- report "Entity: counter = " & integer'image(i);
-   -- report "Entity: data_in at des = " & std_logic'image(data_in);
-    
-    if i = 1 then
-      shift := 1;
-    end if;
-    if shift =1 then
-    	shifter(i-1) <= data_in;
-    --  report "Entity: shifted_data = " & std_logic'image(data_in); 
+   
+    if i>0 then
+      shifter(i-1) <= data_in;
     end if;
     i := i+1;
     
